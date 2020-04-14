@@ -11,8 +11,9 @@
 	// const element = React.createElement('div' , {className : 'container' , children : ['hello' , 'gg']} , )
 
 	const content = 'hello World'
+	const myClassName = 'container'
 	// you are exiting jsx land and entering java script land
-	const element = <div className = "container"> {content} </div>
+	const element = <div className = {myClassName}> {content} </div>
 	ReactDOM.render(element , rootElement)
 	console.log(element)
 </script>
