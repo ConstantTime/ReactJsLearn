@@ -1,0 +1,18 @@
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type="text/babel">
+	 const rootElement = document.getElementById('root')
+	// const element = document.createElement('div')
+	// element.textContent = 'Hello World'
+	// element.className = 'container'
+	// rootElement.appendChild(element)
+	// const element = React.createElement('div' , {className : 'container' , children : ['hello' , 'gg']} , )
+
+	const content = 'hello World'
+	// you are exiting jsx land and entering java script land
+	const element = <div className = "container"> {content} </div>
+	ReactDOM.render(element , rootElement)
+	console.log(element)
+</script>
