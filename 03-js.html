@@ -11,8 +11,8 @@
     );
   }
 
-  SayHello.propTypes = {
-    firstName(props, propsName, componentName) {
+  const PropTypes = {
+    string(props, propsName, componentName) {
       if (typeof props[propsName] !== "string") {
         return new Error(
           `You should pass a string for ${propsName} in ${componentName} but you passed a ${typeof props[
@@ -22,6 +22,12 @@
       }
     },
   };
+
+  SayHello.propTypes = {
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+  };
+
   ReactDOM.render(
     <SayHello firstName={true} />,
     document.getElementById("root")
