@@ -5,11 +5,21 @@
 <script type="text/babel">
 	const rootElement = document.getElementById('root')
 	const helloWorld = <div> Hello World </div>
-	const message = (props) => <div> {props.msg} </div>
+	// const message = (props) => <div> {props.msg} </div>
+	// const element = (
+	// 	<div className = "container">
+		
+	// 	<div> {React.createElement(message  , {msg : 'Hello World'})} </div>
+	// 	<div> {React.createElement(message  , {msg : 'Goodbye World'})} </div>
+	// 	</div>
+	// )
+
+	// reusing components by writing the first letter in capitals
+	const Message = (props) => <div> {props.msg} </div>
 	const element = (
 		<div className = "container">
-		<div> {React.createElement(message  , {msg : 'Hello World'})} </div>
-		<div> {React.createElement(message  , {msg : 'Goodbye World'})} </div>
+		<Message msg = "Hello World" />
+		<Message msg = "Hello World" />
 		</div>
 	)
 
