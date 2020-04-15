@@ -8,8 +8,8 @@
 	const message = (props) => <div> {props.msg} </div>
 	const element = (
 		<div className = "container">
-		<div> {message({msg : 'Hello World'})} </div>
-		<div> {message({msg : 'Goodbye World'})} </div>
+		<div> {React.createElement(message  , {msg : 'Hello World'})} </div>
+		<div> {React.createElement(message  , {msg : 'Goodbye World'})} </div>
 		</div>
 	)
 
