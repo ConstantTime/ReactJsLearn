@@ -3,32 +3,28 @@
 <script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
 <script type="text/babel">
-	 const rootElement = document.getElementById('root')
-	// const element = document.createElement('div')
-	// element.textContent = 'Hello World'
-	// element.className = 'container'
-	// rootElement.appendChild(element)
-	// const element = React.createElement('div' , {className : 'container' , children : ['hello' , 'gg']} , )
+  const rootElement = document.getElementById("root");
+  // const element = document.createElement('div')
+  // element.textContent = 'Hello World'
+  // element.className = 'container'
+  // rootElement.appendChild(element)
+  // const element = React.createElement('div' , {className : 'container' , children : ['hello' , 'gg']} , )
 
-	const content = 'hello World'
-	const myClassName = 'container'
-	// you are exiting jsx land and entering java script land
-	const props = {
-		className : 'container',
-		children : 'Hello World'
-	}
-	//	const element = <div className = {myClassName}> {content} </div>
+  const content = "hello World";
+  const myClassName = "container";
+  // you are exiting jsx land and entering java script land
+  const props = {
+    className: "container",
+    children: "Hello World",
+  };
+  // const element = <div className = {myClassName}> {content} </div>
 
-	// if nothing in className is provided
-	const element = (
-		<div className = "my-class" {...props}/>
-	)
+  // if nothing in className is provided
+  const element = <div className="my-class" {...props} />;
 
-	// if you have to override the classname
+  // if you have to override the classname
 
-	const element = (
-		<div {...props} className = "my-class"/>
-	)
-	ReactDOM.render(element , rootElement)
-	console.log(element)
+  const element = <div {...props} className="my-class" />;
+  ReactDOM.render(element, rootElement);
+  console.log(element);
 </script>
