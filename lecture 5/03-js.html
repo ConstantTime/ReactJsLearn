@@ -2,30 +2,20 @@
 <script src="https://unpkg.com/react@16.3.0/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@16.3.0/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
 <script type="text/babel">
   function SayHello(props) {
     return (
       <div>
-        Hello {props.firstName} {props.lastName}
+        Hello {props.firstName} {props.lastName || "unknown"}
       </div>
     );
   }
-
-  const PropTypes = {
-    string(props, propsName, componentName) {
-      if (typeof props[propsName] !== "string") {
-        return new Error(
-          `You should pass a string for ${propsName} in ${componentName} but you passed a ${typeof props[
-            propsName
-          ]}`
-        );
-      }
-    },
-  };
-
+  // In the default prop types module,
+  // they are considered to be optional by default
   SayHello.propTypes = {
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
   };
 
   ReactDOM.render(
