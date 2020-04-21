@@ -13,3 +13,12 @@
   text-align: center;
   font-size: large;
 }
+
+.customDiv {
+  margin-bottom: 10px;
+  min-height: 50px;
+  background-color: silver;
+  text-align: center;
+  font-size: large;
+  padding: 10px;
+}
