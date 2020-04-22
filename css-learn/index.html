@@ -25,20 +25,35 @@
   </head>
   <!--START OFF WITH LECTURE - 8 BOOTSTRAP TUTORIALS-->
   <body>
-    <p><u>This text ill be underline</u></p>
-    <hr />
-    <p><s> striken</s></p>
-    <p><mark>Highlighted</mark></p>
-    <p><strong>Bold</strong></p>
-    <hr />
-    <!--Lead paragraph concept-->
-    <p class="lead">
-      <abbr title="Bootstrap">What is bootstrap</abbr>
-    </p>
-    <p>
-      Bootstrap is a free open source and is the most popular HTML, css and JS
-      framework.
-    </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="list-group">
+            <li class="list-group-item">India</li>
+            <li class="list-group-item">USA</li>
+            <li class="list-group-item">
+              Australia <span class="badge">New</span>
+            </li>
+          </ul>
+
+          <div class="list-group">
+            <a href="http://dell.com" target = "_blank" class = "list-group-item list-group-item-danger">Dell </a>
+            <a href="http://google.com" target = "_blank" class = "list-group-item list-group-item-success">Google </a>
+            <a href="http://microsoft.com" target = "_blank" class = "list-group-item list-group-item-warning">MS </a>
+          </ul>
+        </div>
+
+        <ul class="list-group">
+        <li class = "list-group-item disabled">Disabled Item</li>
+        <li class = "list-group-item active">Active item</li>  
+        </ul>
+      </div>
+
+      <div id="browse_app">
+        <a class="btn btn-large btn-info" href="http://twitter.com">Browse</a>
+      </div>
+      </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"

@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React-learn</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <script type="text/babel">
+        class App extends React.Component {
+          render() {
+            // JSX is way fo us to write HTML code inside JS
+            return (
+              <div className="app-content">
+                <h1> Hey, ninjas </h1>
+                <p> {Math.random() * 10} </p>
+              </div>
+            );
+          }
+        }
+        // first name is which component to render
+        ReactDOM.render(<App />, document.getElementById("app"));
+      </script>
+    </div>
+  </body>
+</html>
