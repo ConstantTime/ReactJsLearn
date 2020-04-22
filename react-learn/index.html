@@ -23,12 +23,57 @@
     <div id="app">
       <script type="text/babel">
         class App extends React.Component {
+          state = {
+            name: "Ryu0",
+            age: 30,
+          };
+
+          handleClick = (e) => {
+            var nm = this.state.name;
+            var number = nm.charCodeAt(nm.length - 1) - "0".charCodeAt(0);
+            var main = nm.substr(0, nm.length - 1);
+            number = number + 1;
+            //  console.log(main, number);
+            var final_string = main.concat(number.toString(10));
+            this.setState({
+              name: final_string,
+            });
+            console.log(e.target);
+          };
+
+          handleChange = (e) => {
+            this.setState({
+              name: e.target.value,
+            });
+          };
+          // Arrow functions bind value of this
+          // to its value outside the function
+
+          handleHover = (e) => {
+            console.log(e.target);
+          };
+
+          handleSubmit = (e) => {
+            e.preventDefault();
+            const [input] = e.target.children;
+            this.setState({
+              name: input.value,
+            });
+          };
           render() {
             // JSX is way fo us to write HTML code inside JS
             return (
               <div className="app-content">
                 <h1> Hey, ninjas </h1>
-                <p> {Math.random() * 10} </p>
+                <p>
+                  {" "}
+                  My name is : {this.state.name} and I am {this.state.age}{" "}
+                </p>
+
+                <form onSubmit={this.handleSubmit}>
+                  <input type="text" />
+                  <button className="btn btn-primary"> Submit </button>
+                </form>
               </div>
             );
           }
