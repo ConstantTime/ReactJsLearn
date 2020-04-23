@@ -1,4 +1,9 @@
 {
-    "editor.formatOnSave": true,
-    "git.ignoreLimitWarning": true
+  "editor.formatOnSave": true,
+  "git.ignoreLimitWarning": true,
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true
 }
